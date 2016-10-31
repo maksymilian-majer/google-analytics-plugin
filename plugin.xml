@@ -90,4 +90,16 @@
     <source-file src="wp8/PhoneNameResolver.cs" />
     <source-file src="wp8/PlatformInfoProvider.WP.cs" />
   </platform>
+
+  <platform name="browser">
+      <config-file target="config.xml" parent="/*">
+          <feature name="UniversalAnalytics">
+              <param name="browser-package" value="UniversalAnalytics" />
+          </feature>
+      </config-file>
+
+      <js-module src="browser/UniversalAnalyticsPluginProxy.js" name="UniversalAnalyticsProxy">
+          <runs />
+      </js-module>
+  </platform>
 </plugin>
