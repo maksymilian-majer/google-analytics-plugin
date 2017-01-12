@@ -148,3 +148,7 @@ window['GoogleAnalyticsObject'] = 'fooGa';
 ```
 
 The plugin will pick up the new name.
+
+# Browser platform (proxy using App Analytics)
+For browser integration to work it is __required__ to set the 'appName' app field `__ga.set('appName', 'FooBar')` and it is recommended to also set the app version to make it easier to track the users `__ga.set('appVersion', '1.0.0')`.
+This assumes that both the mobile apps and browser apps are going to use Google Analytics App view as it tracks screenviews rather than pageviews.
